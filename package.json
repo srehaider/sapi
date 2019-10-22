@@ -1,0 +1,58 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Simple APIs in node",
+  "author": "Rehan Haider",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/srehaider/sapi.git"
+  },
+  "main": "./src/server.mjs",
+  "keywords": [
+    "simple",
+    "rest",
+    "api"
+  ],
+  "homepage": "https://github.com/srehaider/sapi#readme",
+  "engines": {
+    "node": ">= 10.x"
+  },
+  "scripts": {
+    "lint": "eslint --fix './src/**/*.mjs' && echo 'Lint complete.'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server.mjs",
+    "dev": "nodemon --experimental-modules ./src/server.mjs"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.*": [
+      "./node_modules/.bin/eslint"
+    ]
+  },
+  "dependencies": {
+    "@hapi/joi": "^16.1.7",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.4",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.8",
+    "lint-staged": "^9.4.2",
+    "nodemon": "^1.19.3",
+    "prettier": "^1.18.2"
+  }
+}

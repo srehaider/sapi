@@ -1,0 +1,7 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.renderWhitespace": "all",
+    "files.exclude": {
+        "**/node_modules": true
+    }
+}
